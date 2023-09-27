@@ -125,3 +125,4 @@ STATIC_ROOT = "/var/www/croix-rouge-dons.live/static"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS=['https://croix-rouge-dons.live']
