@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-z%a_evw_7#-0-jtdg0puy0v&hv6!29d!un7p+&aot4z@=-7am=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "157.159.195.58", "croix-rouge-dons.live"]
+ALLOWED_HOSTS = ["127.0.0.1", "croix-rouge-dons.live", "https://croix-rouge-dons.live"]
 
 
 # Application definition
@@ -112,6 +112,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "Poly/static")
 ]
+
 STATIC_ROOT = "/var/www/croix-rouge-dons.live/static"
 
 # Default primary key field type
