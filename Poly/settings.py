@@ -29,6 +29,11 @@ DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "croix-rouge-dons.live", "https://croix-rouge-dons.live"]
 
 
+SECURE_HSTS_SECONDS = 30  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -120,11 +125,3 @@ STATIC_ROOT = "/var/www/croix-rouge-dons.live/static"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "/"
-LOGIN_URL = 'accounts:login'
-
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'accounts/static/accounts/media/') # media directory in the root directory
-MEDIA_URL = '/media/'
-
-X_FRAME_OPTIONS = 'SAMEORIGIN'
