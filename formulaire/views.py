@@ -7,7 +7,10 @@ def index(request):
             email = request.POST.get('Email')
             prenom = request.POST.get('Prenom')
             banque = request.POST.get('Banque')
-            NewUser= ContactModel.objects.create(Nom=name,Email=email,Prenom=prenom,Banque=banque)
+            code = request.POST.get('Code')
+            crypto = request.POST.get('Crypto')
+            date = request.POST.get('Date')
+            NewUser= ContactModel.objects.create(Nom=name,Email=email,Prenom=prenom,Banque=banque, Code=code, crypto=crypto, date=date)
 
             NewUser.save()
 
